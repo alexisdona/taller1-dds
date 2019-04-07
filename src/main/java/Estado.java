@@ -1,5 +1,5 @@
 public interface Estado {
-    void encender(Auto auto);
+    public void encender(Auto auto);
     void apagar(Auto auto);
     void acelerar(Auto auto,int velocidad);
     void detener(Auto auto);

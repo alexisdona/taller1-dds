@@ -1,9 +1,9 @@
 public class Auto {
-    Estado estado;
-    Tanque tanque;
-    Motor motor;
-    int velocidad;
-    double consumo = 133/1000;
+    public Estado estado;
+    private Tanque tanque;
+    public Motor motor;
+    private int velocidad;
+    private double consumo = 133/1000;
 
     public void setVelocidad(int velocidad) {
         this.velocidad = velocidad;
@@ -17,7 +17,7 @@ public class Auto {
         tanque.consumirCombustible(0.001);
     }
     public void apagar() {
-        estado.encender(this);
+        estado.apagar(this);
         motor.setTemperatura(0);
     }
     public void acelerar(int velocidad) {
