@@ -26,17 +26,16 @@ public class Auto {
     }
     public void detener() {
         motor.modificarTemperatura(0.04*getVelocidad());
-        estado.detener();
+        estado.detener(this);
     }
     public boolean estaEnReserva() {
-        estado.estaEnReserva(this);
-
+       return estado.estaEnReserva(this);
     }
     public boolean estaProximoReserva() {
-        tanque.estaProximoReserva();
+       return tanque.estaProximoReserva();
     }
     public boolean estaCalilente() {
-        estado.estaCaliente();
+      return estado.estaCaliente(this);
 
     }
     public boolean tieneTanqueEnReserva(){

@@ -1,5 +1,7 @@
+import java.lang.RuntimeException;
+
 public class YaApagadoException extends RuntimeException {
-    public YaEncendidoException(String mensaje) {
+    public YaApagadoException(String mensaje) {
         super(mensaje);
     }
 }

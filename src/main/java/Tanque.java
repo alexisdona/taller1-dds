@@ -9,7 +9,7 @@ public class Tanque {
     public boolean estaProximoReserva()   {
         return ( this.porcentaje > 0.1 && this.porcentaje < 0.15);
     }
-    double consumirCombustible(double consumo) {
+    void consumirCombustible(double consumo) {
         this.capacidadReal -= this.capacidadReal*(consumo/100);
     }
 }

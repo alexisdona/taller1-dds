@@ -21,4 +21,14 @@ public class Apagado implements Estado {
     public boolean estaCaliente(Auto auto) {
         return false;
     }
+
+    @Override
+    public void detener(Auto auto) {
+        throw new YaApagadoException("El auto está apagado");
+    }
+
+    @Override
+    public void acelerar(Auto auto, int velocidad) {
+        throw new YaApagadoException("El auto está apagado");
+    }
 }
